@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #202b3c;
+  background: #f7f8fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, a { font: inherit; }
+a { color: #5265d9; text-decoration: none; }
+
+.app-shell { min-height: 100vh; }
+.sidebar {
+  position: fixed; inset: 0 auto 0 0; width: 238px;
+  background: #fff; border-right: 1px solid #e9ecf3;
+  padding: 27px 17px; display: flex; flex-direction: column;
+}
+.brand { display: flex; align-items: center; gap: 10px; font: 800 23px Manrope, sans-serif; }
+.brand-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; background: #5969dc; color: white; }
+.workspace { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: #929aab; margin: 48px 10px 13px; }
+.sidebar nav { display: grid; gap: 7px; }
+.nav-item { display: flex; align-items: center; gap: 13px; padding: 12px; border-radius: 9px; color: #707b8e; font-size: 13px; }
+.nav-item.active { background: #eff1ff; color: #4d5ed0; font-weight: 700; }
+.sidebar-bottom { margin-top: auto; padding-top: 18px; border-top: 1px solid #edf0f5; display: flex; align-items: center; gap: 10px; font-size: 12px; }
+.avatar { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: #e9eaff; color: #5362ca; font-size: 11px; font-weight: 700; flex-shrink: 0; }
+.sidebar-bottom small { display: block; margin-top: 4px; color: #8c95a5; }
+.main-content { margin-left: 238px; padding: 0 36px 20px; max-width: 1700px; }
+.topbar { height: 72px; border-bottom: 1px solid #e9ecf3; display: flex; align-items: center; justify-content: space-between; }
+.breadcrumb { font-size: 12px; color: #8a93a4; }
+.breadcrumb span { margin: 0 9px; }
+.profile { display: flex; align-items: center; gap: 9px; font-size: 12px; }
+.online-dot { width: 7px; height: 7px; display: inline-block; border-radius: 50%; background: #24b47e; }
+.welcome { padding: 32px 0 25px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.eyebrow { font-size: 10px; letter-spacing: 1.2px; font-weight: 700; color: #939bad; }
+h1, h2, p { margin-top: 0; }
+h1 { font: 800 29px Manrope, sans-serif; letter-spacing: -1px; margin-bottom: 8px; }
+.muted { color: #8992a3; font-size: 12px; margin-bottom: 0; }
+.primary-button, .secondary-button { cursor: pointer; border-radius: 8px; padding: 11px 15px; font-size: 12px; font-weight: 600; }
+.primary-button { border: 0; background: #5969dc; color: white; box-shadow: 0 3px 8px #5969dc22; }
+.secondary-button { width: 100%; border: 1px solid #e4e8f0; background: white; color: #5866cc; margin-top: 14px; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.stat-card, .panel { background: #fff; border: 1px solid #e9ecf3; border-radius: 12px; }
+.stat-card { padding: 19px; }
+.stat-card p { color: #7e889a; font-size: 11px; margin-bottom: 13px; }
+.stat-number { font: 800 29px Manrope, sans-serif; margin-bottom: 9px; }
+.stat-note { font-size: 10px; font-weight: 700; }
+.stat-note span { color: #9aa2b0; font-weight: 400; }
+.positive { color: #19996a; }
+.warning { color: #d18a25; }
+.content-grid { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(270px, 1fr); gap: 16px; margin-top: 19px; }
+.panel { padding: 21px; min-width: 0; }
+.panel-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 20px; }
+h2 { font: 700 14px Manrope, sans-serif; margin-bottom: 6px; }
+.panel-heading a { font-size: 11px; white-space: nowrap; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; white-space: nowrap; }
+th { font-size: 9px; letter-spacing: .5px; color: #98a0af; font-weight: 600; padding: 0 12px 13px 0; }
+td { border-top: 1px solid #f0f2f7; padding: 15px 12px 15px 0; font-size: 10px; color: #798395; }
+td strong { color: #303b4c; font-size: 10px; }
+.status { display: inline-block; padding: 5px 7px; border-radius: 5px; font-size: 9px; font-weight: 600; }
+.booked { color: #16865e; background: #e9f8f0; }
+.resolved { color: #5966bf; background: #eef0ff; }
+.follow-up { color: #b47718; background: #fff4df; }
+.appointment-list { display: grid; }
+.appointment { display: flex; align-items: center; gap: 10px; padding: 14px 0; border-top: 1px solid #f0f2f7; }
+.appointment-time { width: 64px; flex-shrink: 0; font-size: 10px; color: #727e91; }
+.appointment-info { display: grid; gap: 5px; min-width: 0; }
+.appointment-info strong { font-size: 11px; }
+.appointment-info span { font-size: 10px; color: #929aab; }
+.appointment-dot { width: 7px; height: 7px; border-radius: 50%; background: #8a8df1; margin-left: auto; flex-shrink: 0; }
+.assistant-banner { margin-top: 18px; border: 1px solid #e3e7fa; background: #f0f2ff; border-radius: 12px; padding: 17px 20px; display: flex; align-items: center; gap: 14px; }
+.assistant-symbol { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: white; color: #5969dc; font-size: 23px; }
+.assistant-copy { flex: 1; }
+.assistant-copy strong { font-size: 12px; }
+.assistant-copy p { margin: 5px 0 0; color: #79839a; font-size: 11px; line-height: 1.6; }
+.live-pill { display: flex; align-items: center; gap: 6px; font-size: 10px; color: #188a60; font-weight: 700; }
+footer { text-align: center; color: #a1a8b5; font-size: 10px; padding: 25px 0 5px; }
+
+@media (max-width: 1050px) {
+  .sidebar { width: 190px; }
+  .main-content { margin-left: 190px; padding: 0 22px 20px; }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .content-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 650px) {
+  .sidebar { position: static; width: 100%; height: auto; padding: 14px; }
+  .workspace, .sidebar-bottom { display: none; }
+  .sidebar nav { display: flex; overflow-x: auto; margin-top: 15px; }
+  .nav-item { white-space: nowrap; padding: 9px; }
+  .main-content { margin-left: 0; padding: 0 14px 20px; }
+  .topbar { height: 55px; }
+  .welcome { align-items: flex-start; flex-direction: column; }
+  h1 { font-size: 25px; }
+  .stats-grid { gap: 10px; }
+  .stat-card { padding: 14px; }
+  .stat-number { font-size: 25px; }
+  .assistant-banner { align-items: flex-start; }
+  .live-pill { white-space: nowrap; }
+}
